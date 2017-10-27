@@ -1,0 +1,1508 @@
+{
+    "client_metrics": [
+        {
+            "p99_lats": [
+                1.5529820099999998, 
+                0.31982048, 
+                0.32015382, 
+                0.32290584, 
+                0.3176458099999999, 
+                0.31790616, 
+                0.31942883
+            ], 
+            "all_metrics": [
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "1555942.9800000000505", 
+                                "min": "272797", 
+                                "max": "1570860", 
+                                "p95": "1487355.54999999988286", 
+                                "std_dev": "359255.786235058045975", 
+                                "mean": "907886.383333333333496", 
+                                "p50": "890297.5", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "6.99000000000000909495", 
+                                "min": "3", 
+                                "max": "14", 
+                                "p95": "6", 
+                                "std_dev": "1.1088733020503289227", 
+                                "mean": "4.51999999999999999695", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "15", 
+                                "p95": "0", 
+                                "std_dev": "0.858892854549138665176", 
+                                "mean": "0.0493421052631578947354", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "304"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "21", 
+                                "min": "0", 
+                                "max": "21", 
+                                "p95": "20", 
+                                "std_dev": "6.21219051818419431025", 
+                                "mean": "10.3921568627450980381", 
+                                "p50": "10", 
+                                "unit": "microseconds", 
+                                "size": "153"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "1394933.3599999994949", 
+                                "min": "204053", 
+                                "max": "1420677", 
+                                "p95": "231260.400000000008276", 
+                                "std_dev": "135208.482294892372636", 
+                                "mean": "234557.384105960264947", 
+                                "p50": "217689", 
+                                "unit": "microseconds", 
+                                "size": "151"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "588.510000000000047748", 
+                                "min": "47", 
+                                "max": "633", 
+                                "p95": "561.699999999999931788", 
+                                "std_dev": "191.874957488742192327", 
+                                "mean": "200.804979253112033166", 
+                                "p50": "93", 
+                                "unit": "microseconds", 
+                                "size": "482"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.114322360937960720118", 
+                                "mean": "1.98675496688741721715", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "151"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "4.9236501066479024", 
+                                "rate_1min": "4.1447889584832867", 
+                                "rate_5min": "0.91624551654977759", 
+                                "unit": "events per second", 
+                                "rate_15min": "0.31066354728665968"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "16.844035294093207", 
+                                "rate_1min": "13.659702340612561", 
+                                "rate_5min": "12.983589837300768", 
+                                "unit": "events per second", 
+                                "rate_15min": "12.861877819954035"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "4.9243148402713945", 
+                                "rate_1min": "4.1447889584832867", 
+                                "rate_5min": "0.91624551654977759", 
+                                "unit": "events per second", 
+                                "rate_15min": "0.31066354728665968"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "4.9236391976234053", 
+                                "rate_1min": "4.1447889584832867", 
+                                "rate_5min": "0.91624551654977759", 
+                                "unit": "events per second", 
+                                "rate_15min": "0.31066354728665968"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "7.910641914125879", 
+                                "rate_1min": "6.2281252388587776", 
+                                "rate_5min": "1.4840982592446723", 
+                                "unit": "events per second", 
+                                "rate_15min": "0.50992668919128015"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "300"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "300"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "482"
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "317687.100000000003547", 
+                                "min": "209785", 
+                                "max": "319434", 
+                                "p95": "309153.399999999973488", 
+                                "std_dev": "30295.0513870192221564", 
+                                "mean": "263429.48504983388699", 
+                                "p50": "258357", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "7", 
+                                "min": "2", 
+                                "max": "8", 
+                                "p95": "6", 
+                                "std_dev": "0.959322100729573235467", 
+                                "mean": "4.52823920265780730313", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "166"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "233856.680000000029963", 
+                                "min": "191847", 
+                                "max": "235462", 
+                                "p95": "226720.55000000000814", 
+                                "std_dev": "9013.18395256855439701", 
+                                "mean": "211966.807228915662677", 
+                                "p50": "211876", 
+                                "unit": "microseconds", 
+                                "size": "166"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "591.900000000000090949", 
+                                "min": "48", 
+                                "max": "611", 
+                                "p95": "558.899999999999977263", 
+                                "std_dev": "197.548944515502211794", 
+                                "mean": "202.491694352159468495", 
+                                "p50": "92", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.389708288906888397195", 
+                                "mean": "1.81325301204819276863", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "166"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "17.105924258945503", 
+                                "rate_1min": "14.445842287380415", 
+                                "rate_5min": "14.09510062788606", 
+                                "unit": "events per second", 
+                                "rate_15min": "14.032046940376038"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "17.10591259333307", 
+                                "rate_1min": "14.460554825328158", 
+                                "rate_5min": "14.098351698553982", 
+                                "unit": "events per second", 
+                                "rate_15min": "14.033148832118233"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "17.105842599992599", 
+                                "rate_1min": "14.445842287380415", 
+                                "rate_5min": "14.09510062788606", 
+                                "unit": "events per second", 
+                                "rate_15min": "14.032046940376038"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "17.10570650347027", 
+                                "rate_1min": "9.5542161375363897", 
+                                "rate_5min": "7.8747543046967445", 
+                                "unit": "events per second", 
+                                "rate_15min": "7.5608839654536881"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "17.10564234443228", 
+                                "rate_1min": "14.445842287380415", 
+                                "rate_5min": "14.09510062788606", 
+                                "unit": "events per second", 
+                                "rate_15min": "14.032046940376038"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "301"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "301"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "301"
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "317829.910000000004629", 
+                                "min": "213105", 
+                                "max": "320820", 
+                                "p95": "309390.84999999999792", 
+                                "std_dev": "30282.9276016149989985", 
+                                "mean": "264050.696666666666658", 
+                                "p50": "256881", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "6", 
+                                "min": "1", 
+                                "max": "7", 
+                                "p95": "6", 
+                                "std_dev": "0.95695698266257855116", 
+                                "mean": "4.52999999999999999672", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "299"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "165"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "235692.680000000008022", 
+                                "min": "191696", 
+                                "max": "237245", 
+                                "p95": "229955.999999999978172", 
+                                "std_dev": "9926.92161505107421693", 
+                                "mean": "212996.678787878787858", 
+                                "p50": "213433", 
+                                "unit": "microseconds", 
+                                "size": "165"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "600", 
+                                "min": "47", 
+                                "max": "608", 
+                                "p95": "571", 
+                                "std_dev": "197.659717273447808408", 
+                                "mean": "206.973244147157190584", 
+                                "p50": "96", 
+                                "unit": "microseconds", 
+                                "size": "299"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.385694607919935013762", 
+                                "mean": "1.81818181818181818046", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "165"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "17.0734880487291", 
+                                "rate_1min": "15.800213047205398", 
+                                "rate_5min": "15.642646388657269", 
+                                "unit": "events per second", 
+                                "rate_15min": "15.614367563246313"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "17.073480275292795", 
+                                "rate_1min": "7.5133429844766004", 
+                                "rate_5min": "5.3982520917592112", 
+                                "unit": "events per second", 
+                                "rate_15min": "5.0027501551184619"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "17.073314119784438", 
+                                "rate_1min": "7.6555669527270398", 
+                                "rate_5min": "5.5853006414630961", 
+                                "unit": "events per second", 
+                                "rate_15min": "5.1983486587883245"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "17.016352714959076", 
+                                "rate_1min": "7.670381720217275", 
+                                "rate_5min": "5.5885526152271074", 
+                                "unit": "events per second", 
+                                "rate_15min": "5.199450584539612"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "17.073212096074833", 
+                                "rate_1min": "7.5133429844766004", 
+                                "rate_5min": "5.3982520917592112", 
+                                "unit": "events per second", 
+                                "rate_15min": "5.0027501551184619"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "299"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "300"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "300"
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "320667", 
+                                "min": "210757", 
+                                "max": "322150", 
+                                "p95": "315393", 
+                                "std_dev": "30718.6920292785992341", 
+                                "mean": "265404.698996655518329", 
+                                "p50": "261344", 
+                                "unit": "microseconds", 
+                                "size": "299"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "10", 
+                                "min": "2", 
+                                "max": "15", 
+                                "p95": "6", 
+                                "std_dev": "1.13096898185144339099", 
+                                "mean": "4.6856187290969899587", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "299"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "19", 
+                                "p95": "0", 
+                                "std_dev": "1.18880209079107335385", 
+                                "mean": "0.0903010033444816053515", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "299"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "164"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "233701.449999999980719", 
+                                "min": "192017", 
+                                "max": "235903", 
+                                "p95": "228609.25", 
+                                "std_dev": "10053.2152073234298193", 
+                                "mean": "213630.463414634146332", 
+                                "p50": "214667.5", 
+                                "unit": "microseconds", 
+                                "size": "164"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "603", 
+                                "min": "52", 
+                                "max": "656", 
+                                "p95": "570", 
+                                "std_dev": "196.257481796448232519", 
+                                "mean": "201.498327759197324457", 
+                                "p50": "92", 
+                                "unit": "microseconds", 
+                                "size": "299"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.381524151486845308567", 
+                                "mean": "1.82317073170731707181", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "164"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "17.064639942945888", 
+                                "rate_1min": "13.968656907467924", 
+                                "rate_5min": "13.521327747500456", 
+                                "unit": "events per second", 
+                                "rate_15min": "13.4408866289409"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "17.064629229837898", 
+                                "rate_1min": "13.643498176333027", 
+                                "rate_5min": "13.137637739407822", 
+                                "unit": "events per second", 
+                                "rate_15min": "13.0464022263087"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "17.064555212368386", 
+                                "rate_1min": "13.643498176333027", 
+                                "rate_5min": "13.137637739407822", 
+                                "unit": "events per second", 
+                                "rate_15min": "13.0464022263087"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "17.064414970502817", 
+                                "rate_1min": "13.643498176333027", 
+                                "rate_5min": "13.137637739407822", 
+                                "unit": "events per second", 
+                                "rate_15min": "13.0464022263087"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "17.064365302061525", 
+                                "rate_1min": "9.0562320126716678", 
+                                "rate_5min": "7.2974598700927178", 
+                                "unit": "events per second", 
+                                "rate_15min": "6.9685911710195025"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "299"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "299"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "299"
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "317641.650000000019645", 
+                                "min": "203575", 
+                                "max": "319518", 
+                                "p95": "309656.04999999999842", 
+                                "std_dev": "30058.0819218265045567", 
+                                "mean": "264487.210000000000036", 
+                                "p50": "258424", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "7", 
+                                "min": "2", 
+                                "max": "13", 
+                                "p95": "6", 
+                                "std_dev": "1.0648734927471692665", 
+                                "mean": "4.62666666666666666395", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "166"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "231190.300000000002626", 
+                                "min": "188447", 
+                                "max": "231331", 
+                                "p95": "225781.050000000003024", 
+                                "std_dev": "9504.74441279675269634", 
+                                "mean": "211968.144578313253021", 
+                                "p50": "212915.5", 
+                                "unit": "microseconds", 
+                                "size": "166"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "595.96000000000003638", 
+                                "min": "47", 
+                                "max": "611", 
+                                "p95": "578", 
+                                "std_dev": "196.413953871619341648", 
+                                "mean": "202.807308970099667816", 
+                                "p50": "92", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.394474832379395178576", 
+                                "mean": "1.80722891566265059997", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "166"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "17.047661055220669", 
+                                "rate_1min": "7.3428702899145781", 
+                                "rate_5min": "5.204755136191145", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.8049539726119432"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "17.047652336542704", 
+                                "rate_1min": "15.321749088166515", 
+                                "rate_5min": "15.068818869703909", 
+                                "unit": "events per second", 
+                                "rate_15min": "15.02320111315435"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "17.047487652078505", 
+                                "rate_1min": "7.3428702899145781", 
+                                "rate_5min": "5.204755136191145", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.8049539726119432"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "17.047437278642576", 
+                                "rate_1min": "7.3428702899145781", 
+                                "rate_5min": "5.204755136191145", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.8049539726119432"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "17.104211528522693", 
+                                "rate_1min": "7.5133429844766004", 
+                                "rate_5min": "5.3982520917592112", 
+                                "unit": "events per second", 
+                                "rate_15min": "5.0027501551184619"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "300"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "301"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "300"
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "316325.460000000009586", 
+                                "min": "210946", 
+                                "max": "321007", 
+                                "p95": "310813.149999999997306", 
+                                "std_dev": "29894.0390543414004068", 
+                                "mean": "265382.746666666666727", 
+                                "p50": "258151.5", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "6.99000000000000909495", 
+                                "min": "1", 
+                                "max": "8", 
+                                "p95": "6", 
+                                "std_dev": "0.915399123637091733752", 
+                                "mean": "4.57333333333333333023", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "165"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "234863.140000000029886", 
+                                "min": "188765", 
+                                "max": "240652", 
+                                "p95": "228366.999999999997272", 
+                                "std_dev": "10220.8500603924717476", 
+                                "mean": "213008.545454545454533", 
+                                "p50": "214443", 
+                                "unit": "microseconds", 
+                                "size": "165"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "590", 
+                                "min": "56", 
+                                "max": "601", 
+                                "p95": "567", 
+                                "std_dev": "195.846781921196981646", 
+                                "mean": "202.703333333333333283", 
+                                "p50": "91", 
+                                "unit": "microseconds", 
+                                "size": "300"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.385694607919935013762", 
+                                "mean": "1.81818181818181818046", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "165"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "17.07573681235154", 
+                                "rate_1min": "13.306184065503174", 
+                                "rate_5min": "12.750805937782772", 
+                                "unit": "events per second", 
+                                "rate_15min": "12.650828209247958"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "17.075727092997482", 
+                                "rate_1min": "13.459489293407163", 
+                                "rate_5min": "12.940943448643498", 
+                                "unit": "events per second", 
+                                "rate_15min": "12.847510256707723"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "17.075637675459294", 
+                                "rate_1min": "13.306184065503174", 
+                                "rate_5min": "12.750805937782772", 
+                                "unit": "events per second", 
+                                "rate_15min": "12.650828209247958"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "17.075498691362242", 
+                                "rate_1min": "8.7447116994431084", 
+                                "rate_5min": "6.9169681002924319", 
+                                "unit": "events per second", 
+                                "rate_15min": "6.5752025894908561"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "17.075446208445552", 
+                                "rate_1min": "13.306184065503174", 
+                                "rate_5min": "12.750805937782772", 
+                                "unit": "events per second", 
+                                "rate_15min": "12.650828209247958"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "300"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "300"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "300"
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "histograms": [
+                        {
+                            "app:tf-resnet-feats:prediction_latency": {
+                                "p99": "318683.52000000001135", 
+                                "min": "206868", 
+                                "max": "328701", 
+                                "p95": "311228.399999999999409", 
+                                "std_dev": "30482.8626968724432427", 
+                                "mean": "265523.521594684385377", 
+                                "p50": "259716", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "query_cache:queue_submit_latency": {
+                                "p99": "6", 
+                                "min": "1", 
+                                "max": "7", 
+                                "p95": "6", 
+                                "std_dev": "0.922810925724067500396", 
+                                "mean": "4.62790697674418604127", 
+                                "p50": "5", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "internal:rpc_request_queueing_delay": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "0"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:lock_latency": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "tf-resnet-feats:1:queue_size": {
+                                "p99": "0", 
+                                "min": "0", 
+                                "max": "0", 
+                                "p95": "0", 
+                                "std_dev": "0", 
+                                "mean": "0", 
+                                "p50": "0", 
+                                "unit": "microseconds", 
+                                "size": "165"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:prediction_latency": {
+                                "p99": "231889.200000000000273", 
+                                "min": "187804", 
+                                "max": "231942", 
+                                "p95": "228096.899999999996965", 
+                                "std_dev": "9534.73546553071494714", 
+                                "mean": "213919.284848484848453", 
+                                "p50": "215623", 
+                                "unit": "microseconds", 
+                                "size": "165"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:recv_latency": {
+                                "p99": "607.820000000000163709", 
+                                "min": "56", 
+                                "max": "619", 
+                                "p95": "583.899999999999977263", 
+                                "std_dev": "198.04013529786033164", 
+                                "mean": "206.448504983388704329", 
+                                "p50": "95", 
+                                "unit": "microseconds", 
+                                "size": "301"
+                            }
+                        }, 
+                        {
+                            "model:tf-resnet-feats:1:batch_size": {
+                                "p99": "2", 
+                                "min": "1", 
+                                "max": "2", 
+                                "p95": "2", 
+                                "std_dev": "0.380613781045032282624", 
+                                "mean": "1.82424242424242424106", 
+                                "p50": "2", 
+                                "unit": "queries", 
+                                "size": "165"
+                            }
+                        }
+                    ], 
+                    "meters": [
+                        {
+                            "model:tf-resnet-feats:1:prediction_throughput": {
+                                "rate": "17.049075736185888", 
+                                "rate_1min": "14.984434977336662", 
+                                "rate_5min": "14.681987068078863", 
+                                "unit": "events per second", 
+                                "rate_15min": "14.627627096093606"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_enqueue": {
+                                "rate": "17.049068010714745", 
+                                "rate_1min": "6.8915809371458705", 
+                                "rate_5min": "4.6373231907263941", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.2159791307179946"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:prediction_throughput": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "zmq_frontend:request_rate": {
+                                "rate": "0", 
+                                "rate_1min": "0", 
+                                "rate_5min": "0", 
+                                "unit": "events per second", 
+                                "rate_15min": "0"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_model_throughput": {
+                                "rate": "17.048902880443297", 
+                                "rate_1min": "6.8915809371458705", 
+                                "rate_5min": "4.6373231907263941", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.2159791307179946"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:request_enqueue": {
+                                "rate": "17.048852666024246", 
+                                "rate_1min": "6.8891260084355768", 
+                                "rate_5min": "4.637214816686976", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.2159668874134351"
+                            }
+                        }, 
+                        {
+                            "frontend_rpc:response_dequeue": {
+                                "rate": "17.048786035809474", 
+                                "rate_1min": "6.8915809371458705", 
+                                "rate_5min": "4.6373231907263941", 
+                                "unit": "events per second", 
+                                "rate_15min": "4.2159791307179946"
+                            }
+                        }
+                    ], 
+                    "ratio_counters": [
+                        {
+                            "model:tf-resnet-feats:1:cache_hit_ratio": {
+                                "ratio": "nan"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:default_prediction_ratio": {
+                                "ratio": "nan"
+                            }
+                        }
+                    ], 
+                    "counters": [
+                        {
+                            "model:tf-resnet-feats:1:num_predictions": {
+                                "count": "301"
+                            }
+                        }, 
+                        {
+                            "app:tf-resnet-feats:num_predictions": {
+                                "count": "301"
+                            }
+                        }, 
+                        {
+                            "internal:aggregate_num_predictions": {
+                                "count": "301"
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "thrus": [
+                10.626462555463052, 
+                17.053254471505433, 
+                17.077092770680316, 
+                17.12518590816402, 
+                17.051334349327615, 
+                17.079374571521193, 
+                16.9961945520398
+            ], 
+            "all_lats": [
+                "[1.374684, 1.422364, 1.514568, 1.573271, 1.506524, 1.565315, 1.557834, 1.499247, 1.552933, 1.494375, 1.491609, 1.550319, 1.538986, 1.480426, 1.467347, 1.526109, 1.459323, 1.518038, 1.504336, 1.445763, 1.490075, 1.431572, 1.420849, 1.479576, 1.467959, 1.409509, 1.402468, 1.46122, 1.407501, 1.466189, 1.463072, 1.404587, 1.390396, 1.449146, 1.382015, 1.440779, 1.43248, 1.373995, 1.358679, 1.417334, 1.40793, 1.349502, 1.344557, 1.403262, 1.338621, 1.397371, 1.327268, 1.386039, 1.326278, 1.385028, 1.36898, 1.3105, 1.296739, 1.355437, 1.281103, 1.33987, 1.272945, 1.33173, 1.324745, 1.266217, 1.262617, 1.321387, 1.253547, 1.312237, 1.238504, 1.29717, 1.227155, 1.285915, 1.219236, 1.277911, 1.266474, 1.207946, 1.199181, 1.257938, 1.249881, 1.191362, 1.175328, 1.234079, 1.163813, 1.222472, 1.210968, 1.152543, 1.145527, 1.20427, 1.140144, 1.198927, 1.192149, 1.133704, 1.124346, 1.183012, 1.109421, 1.168171, 1.16105, 1.102524, 1.15082, 1.092295, 1.147107, 1.088663, 1.078993, 1.137657, 1.064237, 1.122903, 1.059075, 1.117817, 1.10799, 1.049447, 1.100508, 1.04199, 1.095468, 1.036984, 1.088178, 1.029701, 1.019555, 1.078219, 1.065312, 1.006847, 1.055439, 0.996997, 1.043745, 0.985209, 0.970765, 1.029551, 1.02359, 0.965155, 0.957808, 1.016466, 1.005655, 0.947248, 0.938597, 0.997389, 0.93445, 0.99316, 0.926936, 0.985588, 0.923093, 0.981832, 0.980287, 0.921764, 0.971613, 0.913175, 0.96355, 0.905032, 0.8891, 0.947761, 0.932433, 0.874008, 0.932028, 0.873509, 0.925906, 0.867473, 0.915422, 0.857014, 0.856953, 0.915606, 0.850257, 0.908994, 0.896416, 0.837983, 0.887895, 0.82946, 0.878535, 0.820096, 0.864716, 0.80617, 0.856684, 0.798246, 0.7912, 0.849971, 0.781263, 0.83992, 0.766483, 0.825132, 0.815505, 0.757072, 0.813192, 0.754775, 0.809701, 0.751289, 0.742848, 0.801606, 0.7382, 0.796953, 0.788927, 0.73047, 0.779901, 0.721486, 0.709904, 0.768626, 0.697066, 0.755811, 0.746362, 0.687931, 0.743498, 0.685071, 0.672093, 0.730768, 0.727008, 0.668582, 0.677219, 0.73587, 0.721665, 0.663157, 0.716128, 0.657625, 0.651996, 0.710738, 0.646958, 0.705721, 0.701867, 0.643411, 0.693681, 0.635176, 0.68388, 0.625485, 0.622594, 0.68124, 0.673483, 0.61498, 0.670158, 0.611733, 0.660301, 0.601878, 0.587049, 0.645792, 0.574705, 0.633485, 0.625847, 0.56742, 0.556767, 0.615487, 0.612705, 0.5543, 0.54357, 0.60222, 0.595314, 0.53687, 0.52719, 0.586129, 0.524231, 0.582987, 0.574733, 0.516359, 0.509051, 0.567846, 0.566248, 0.507736, 0.494763, 0.553482, 0.546926, 0.48851, 0.549736, 0.491328, 0.475336, 0.534084, 0.519225, 0.46068, 0.50905, 0.450534, 0.444699, 0.503451, 0.488405, 0.429962, 0.483306, 0.424908, 0.420845, 0.479523, 0.471514, 0.412989, 0.400049, 0.458705, 0.395923, 0.454578, 0.439705, 0.381194, 0.369661, 0.428408, 0.36079, 0.419557, 0.413545, 0.355092, 0.352355, 0.411042, 0.343925, 0.402672, 0.395148, 0.336713, 0.333204, 0.391904, 0.328604, 0.387278, 0.378923, 0.320411, 0.310662, 0.369413, 0.297778, 0.356555, 0.345858, 0.28735, 0.333318, 0.274903]", 
+                "[0.262774, 0.321541, 0.310195, 0.251783, 0.307752, 0.249319, 0.239548, 0.298218, 0.290037, 0.231599, 0.288886, 0.230373, 0.269803, 0.255203, 0.313989, 0.302495, 0.243992, 0.294745, 0.236232, 0.285315, 0.226927, 0.265142, 0.262637, 0.321434, 0.305184, 0.246754, 0.234023, 0.292827, 0.280834, 0.222323, 0.253281, 0.250739, 0.309486, 0.300008, 0.241565, 0.238786, 0.297499, 0.289239, 0.230766, 0.278604, 0.220086, 0.251287, 0.25092, 0.309672, 0.299782, 0.241352, 0.28945, 0.231028, 0.279481, 0.221065, 0.260631, 0.308986, 0.250547, 0.302741, 0.244329, 0.237073, 0.295893, 0.29101, 0.232489, 0.289699, 0.231173, 0.267353, 0.261332, 0.320165, 0.306209, 0.247798, 0.241649, 0.300328, 0.296639, 0.238099, 0.281395, 0.222946, 0.214158, 0.272956, 0.257572, 0.241529, 0.300308, 0.286691, 0.228159, 0.277024, 0.218582, 0.249011, 0.305007, 0.246575, 0.300216, 0.241666, 0.288436, 0.229976, 0.274439, 0.215966, 0.247016, 0.244178, 0.302857, 0.232423, 0.291176, 0.280587, 0.222115, 0.259312, 0.314413, 0.255862, 0.312205, 0.253752, 0.303113, 0.24467, 0.294066, 0.235638, 0.286842, 0.228379, 0.266487, 0.311471, 0.253063, 0.242705, 0.301483, 0.288716, 0.230298, 0.273971, 0.215555, 0.254, 0.250381, 0.309069, 0.236754, 0.295516, 0.232534, 0.291291, 0.262782, 0.310665, 0.252228, 0.305207, 0.246753, 0.23756, 0.29621, 0.281793, 0.223307, 0.27047, 0.211942, 0.253933, 0.243416, 0.302068, 0.231061, 0.289719, 0.275488, 0.217055, 0.265678, 0.251439, 0.310193, 0.242991, 0.301756, 0.227693, 0.286493, 0.281243, 0.222775, 0.260943, 0.317561, 0.259028, 0.315573, 0.257146, 0.313892, 0.255463, 0.306773, 0.248288, 0.239245, 0.297966, 0.287957, 0.229413, 0.224574, 0.28322, 0.261728, 0.247128, 0.30578, 0.239326, 0.297973, 0.282849, 0.224361, 0.221478, 0.280131, 0.251111, 0.304398, 0.245966, 0.297874, 0.239391, 0.291624, 0.233078, 0.281311, 0.222771, 0.257225, 0.313699, 0.25518, 0.240065, 0.298824, 0.284096, 0.225617, 0.212997, 0.271651, 0.241061, 0.292318, 0.233883, 0.276418, 0.217971, 0.257024, 0.248908, 0.307658, 0.305127, 0.246719, 0.235354, 0.294084, 0.226931, 0.285683, 0.260416, 0.307041, 0.248509, 0.299913, 0.241373, 0.294207, 0.23671, 0.286863, 0.228334, 0.260901, 0.249209, 0.307935, 0.299322, 0.240889, 0.227456, 0.286118, 0.223124, 0.281962, 0.25692, 0.306257, 0.247814, 0.23133, 0.29009, 0.231162, 0.289865, 0.267179, 0.316649, 0.258121, 0.254238, 0.31298, 0.304223, 0.245815, 0.253572, 0.312315, 0.305348, 0.246815, 0.242935, 0.301687, 0.23649, 0.295197, 0.286015, 0.227569, 0.223054, 0.281732, 0.265919, 0.319817, 0.261286, 0.246876, 0.305633, 0.30484, 0.246411, 0.298202, 0.239768, 0.295814, 0.237275, 0.221446, 0.28018, 0.271632, 0.213204, 0.243489, 0.288768, 0.230335, 0.275762, 0.217332, 0.255306, 0.307417, 0.248879, 0.299979, 0.241555, 0.288304, 0.229791, 0.281336, 0.222895, 0.259097, 0.304354, 0.245908, 0.237034, 0.295778, 0.28391, 0.225435, 0.259356, 0.250718, 0.309461, 0.240694, 0.299442, 0.232812, 0.291499, 0.218337, 0.276984, 0.249733, 0.301446, 0.24292, 0.292947]", 
+                "[0.239234, 0.228411, 0.28709, 0.267832, 0.262331, 0.321126, 0.258689, 0.317435, 0.251644, 0.310404, 0.307643, 0.249184, 0.242003, 0.300765, 0.227074, 0.28586, 0.282525, 0.224092, 0.253412, 0.239592, 0.298262, 0.29078, 0.23238, 0.220092, 0.278892, 0.253014, 0.24382, 0.302601, 0.293414, 0.234899, 0.228763, 0.287487, 0.262212, 0.309675, 0.251184, 0.301189, 0.242749, 0.228383, 0.287053, 0.279587, 0.221139, 0.251199, 0.241897, 0.300651, 0.231323, 0.290077, 0.280301, 0.221876, 0.252658, 0.251235, 0.30992, 0.308064, 0.249646, 0.244438, 0.303206, 0.249567, 0.308232, 0.298887, 0.240471, 0.230441, 0.289182, 0.219483, 0.278252, 0.254255, 0.307518, 0.248995, 0.235358, 0.294018, 0.226161, 0.284897, 0.259684, 0.24489, 0.303645, 0.237134, 0.295849, 0.283042, 0.224518, 0.214858, 0.27363, 0.247534, 0.238461, 0.297123, 0.281662, 0.223201, 0.277999, 0.219559, 0.255355, 0.308587, 0.250137, 0.305582, 0.247049, 0.238737, 0.297484, 0.294491, 0.235954, 0.278575, 0.22013, 0.251514, 0.24799, 0.306733, 0.3098, 0.251271, 0.304866, 0.246416, 0.242796, 0.301525, 0.240891, 0.299645, 0.288218, 0.229855, 0.22294, 0.281687, 0.258699, 0.259178, 0.317959, 0.246471, 0.305167, 0.302461, 0.243969, 0.295494, 0.236984, 0.230977, 0.28975, 0.280271, 0.221823, 0.264299, 0.311205, 0.252768, 0.303135, 0.244699, 0.286649, 0.228192, 0.282394, 0.223932, 0.255332, 0.248936, 0.307727, 0.302721, 0.244193, 0.236909, 0.295581, 0.233429, 0.292163, 0.272778, 0.263761, 0.322507, 0.309943, 0.251432, 0.30442, 0.245966, 0.23676, 0.295416, 0.289277, 0.230749, 0.266454, 0.322714, 0.264189, 0.312881, 0.25435, 0.240606, 0.299349, 0.300526, 0.242079, 0.291042, 0.232583, 0.216473, 0.275244, 0.253599, 0.238945, 0.297687, 0.234135, 0.292845, 0.28304, 0.224545, 0.255967, 0.307615, 0.249124, 0.240541, 0.299206, 0.231826, 0.290483, 0.2845, 0.225967, 0.263874, 0.318037, 0.259619, 0.311707, 0.253281, 0.243056, 0.301724, 0.297818, 0.239388, 0.286472, 0.228061, 0.2248, 0.283466, 0.256052, 0.241975, 0.300672, 0.295058, 0.236536, 0.222292, 0.280971, 0.255074, 0.298939, 0.240497, 0.22548, 0.284305, 0.275012, 0.216587, 0.252986, 0.253981, 0.312647, 0.296728, 0.238322, 0.232113, 0.290875, 0.22439, 0.283165, 0.258657, 0.31069, 0.252161, 0.306977, 0.248577, 0.23307, 0.29174, 0.284948, 0.226524, 0.264513, 0.252196, 0.31082, 0.320144, 0.261704, 0.313092, 0.25455, 0.249848, 0.308552, 0.300776, 0.242359, 0.227326, 0.286119, 0.220788, 0.279566, 0.25994, 0.317056, 0.258519, 0.315636, 0.257193, 0.25332, 0.312079, 0.303648, 0.24511, 0.303076, 0.244544, 0.29195, 0.23349, 0.223062, 0.2818, 0.257501, 0.250513, 0.309182, 0.298847, 0.240318, 0.225244, 0.283911, 0.276497, 0.217988, 0.248708, 0.243299, 0.301964, 0.2411, 0.299794, 0.23481, 0.293564, 0.220109, 0.278786, 0.261885, 0.312437, 0.253876, 0.303223, 0.244731, 0.239256, 0.298015, 0.2851, 0.226684, 0.222692, 0.281361, 0.254125, 0.250521, 0.309197, 0.237918, 0.296591, 0.222863, 0.28161, 0.21697, 0.275631, 0.250461, 0.240105, 0.298855, 0.226379]", 
+                "[0.28894, 0.271465, 0.212944, 0.246557, 0.29418, 0.235668, 0.280484, 0.221963, 0.255615, 0.2997, 0.241209, 0.231421, 0.290198, 0.2764, 0.217869, 0.253782, 0.301431, 0.242908, 0.233044, 0.291752, 0.280334, 0.221854, 0.265889, 0.323286, 0.26476, 0.31337, 0.254926, 0.30543, 0.246911, 0.242257, 0.300966, 0.297093, 0.238576, 0.292356, 0.233835, 0.285151, 0.226667, 0.257904, 0.306234, 0.247718, 0.297216, 0.238689, 0.231956, 0.290628, 0.218242, 0.276943, 0.248436, 0.301825, 0.243308, 0.299513, 0.240987, 0.294843, 0.236361, 0.288378, 0.229877, 0.270091, 0.265519, 0.324183, 0.322535, 0.264024, 0.262381, 0.321134, 0.25194, 0.310684, 0.302577, 0.24412, 0.236274, 0.294966, 0.230385, 0.289132, 0.28184, 0.223422, 0.257052, 0.301725, 0.242993, 0.296265, 0.237793, 0.289147, 0.230615, 0.279635, 0.221052, 0.251217, 0.301593, 0.243154, 0.236014, 0.294715, 0.226904, 0.285605, 0.263914, 0.308665, 0.250159, 0.306009, 0.247596, 0.300728, 0.242285, 0.289919, 0.231475, 0.285557, 0.227106, 0.264796, 0.322902, 0.26439, 0.252701, 0.311479, 0.296693, 0.23822, 0.285358, 0.22683, 0.275387, 0.216934, 0.250386, 0.298919, 0.240398, 0.29431, 0.23586, 0.289992, 0.231481, 0.266081, 0.25097, 0.309804, 0.298959, 0.240527, 0.293337, 0.234921, 0.220056, 0.278792, 0.257187, 0.306501, 0.248027, 0.240909, 0.299679, 0.231003, 0.289666, 0.216197, 0.275009, 0.248835, 0.301611, 0.24319, 0.299037, 0.240604, 0.230075, 0.288806, 0.279532, 0.221019, 0.25559, 0.253147, 0.311814, 0.240523, 0.299192, 0.288739, 0.230268, 0.214031, 0.272845, 0.248953, 0.30081, 0.242296, 0.28623, 0.227776, 0.279773, 0.221243, 0.255065, 0.306884, 0.248455, 0.239229, 0.297899, 0.235971, 0.294692, 0.282004, 0.223528, 0.257139, 0.250147, 0.308802, 0.305672, 0.247209, 0.302215, 0.24368, 0.227326, 0.285988, 0.275365, 0.216899, 0.25029, 0.244677, 0.303341, 0.239941, 0.298645, 0.230968, 0.289714, 0.21965, 0.27831, 0.253031, 0.24498, 0.303737, 0.237275, 0.295935, 0.227632, 0.286298, 0.28496, 0.226489, 0.264432, 0.320328, 0.261864, 0.257009, 0.315703, 0.310885, 0.252402, 0.300347, 0.241948, 0.233697, 0.292448, 0.28411, 0.225578, 0.257891, 0.249806, 0.308466, 0.304644, 0.246186, 0.241329, 0.300106, 0.230102, 0.288806, 0.27472, 0.216193, 0.251825, 0.297005, 0.238473, 0.235433, 0.294109, 0.291693, 0.233256, 0.271814, 0.260477, 0.319131, 0.252566, 0.311314, 0.243437, 0.302091, 0.227711, 0.286328, 0.223928, 0.282689, 0.268054, 0.322018, 0.263488, 0.318408, 0.259934, 0.309207, 0.250764, 0.301504, 0.242968, 0.248484, 0.307203, 0.300177, 0.24162, 0.284541, 0.225997, 0.223461, 0.282139, 0.262735, 0.262329, 0.321035, 0.26468, 0.323334, 0.261154, 0.319804, 0.252128, 0.310787, 0.249779, 0.308437, 0.242853, 0.301544, 0.232521, 0.291276, 0.230555, 0.289247, 0.268778, 0.320413, 0.261933, 0.312676, 0.254183, 0.240669, 0.299314, 0.29256, 0.234089, 0.289875, 0.231362, 0.264, 0.261464, 0.320129, 0.260888, 0.31955, 0.25827, 0.317054, 0.255768, 0.314544, 0.24768, 0.306489, 0.23544, 0.294202, 0.227421, 0.286081]", 
+                "[0.261155, 0.309177, 0.250668, 0.242271, 0.300931, 0.234225, 0.292876, 0.282295, 0.223774, 0.258513, 0.305389, 0.246879, 0.235267, 0.294067, 0.280084, 0.221567, 0.252976, 0.240385, 0.299034, 0.291964, 0.233499, 0.230609, 0.289338, 0.265446, 0.315333, 0.256813, 0.251584, 0.310315, 0.306527, 0.248006, 0.238519, 0.297199, 0.224477, 0.283298, 0.274874, 0.216447, 0.255535, 0.247568, 0.306305, 0.237669, 0.296419, 0.232768, 0.291545, 0.2843, 0.225916, 0.266657, 0.312518, 0.25398, 0.247521, 0.306187, 0.232825, 0.291654, 0.280047, 0.221585, 0.246727, 0.292623, 0.234146, 0.286161, 0.227642, 0.264974, 0.31615, 0.257712, 0.249852, 0.308635, 0.301909, 0.243472, 0.29184, 0.233414, 0.228538, 0.287256, 0.266778, 0.320645, 0.262148, 0.305757, 0.247312, 0.298157, 0.239642, 0.286479, 0.227931, 0.277198, 0.218766, 0.25666, 0.253667, 0.312396, 0.311931, 0.253417, 0.250656, 0.309321, 0.241048, 0.299712, 0.291271, 0.232755, 0.223299, 0.282055, 0.258072, 0.255789, 0.314548, 0.305217, 0.246748, 0.303087, 0.244676, 0.241197, 0.299944, 0.288395, 0.229935, 0.273662, 0.215253, 0.260017, 0.314103, 0.255677, 0.246716, 0.305386, 0.243594, 0.302268, 0.295353, 0.236933, 0.224808, 0.283497, 0.224338, 0.282994, 0.258525, 0.314102, 0.255667, 0.308594, 0.25018, 0.241115, 0.29986, 0.295181, 0.236748, 0.284933, 0.226411, 0.25878, 0.313743, 0.255223, 0.311317, 0.253002, 0.238166, 0.296841, 0.28925, 0.230727, 0.278502, 0.219982, 0.259289, 0.248175, 0.306969, 0.300935, 0.242516, 0.293259, 0.234826, 0.279602, 0.221083, 0.250519, 0.235823, 0.294583, 0.224381, 0.283068, 0.26264, 0.306357, 0.247922, 0.298452, 0.239996, 0.295055, 0.236497, 0.285115, 0.226642, 0.261574, 0.249079, 0.30786, 0.240559, 0.299308, 0.233648, 0.292398, 0.222126, 0.280795, 0.253356, 0.308265, 0.249711, 0.29351, 0.235048, 0.223061, 0.281732, 0.265679, 0.26333, 0.322081, 0.309588, 0.251054, 0.24062, 0.299279, 0.235935, 0.294698, 0.285415, 0.2269, 0.262828, 0.314415, 0.255951, 0.312159, 0.253643, 0.247753, 0.30648, 0.299327, 0.240897, 0.288924, 0.2304, 0.217777, 0.276435, 0.253718, 0.247474, 0.306207, 0.29625, 0.237725, 0.221716, 0.280446, 0.26459, 0.206117, 0.242046, 0.2319, 0.290558, 0.220581, 0.27935, 0.253262, 0.309463, 0.251027, 0.247791, 0.306454, 0.291175, 0.232731, 0.275349, 0.216833, 0.256098, 0.248151, 0.306937, 0.240658, 0.29933, 0.234714, 0.293535, 0.225541, 0.284215, 0.257113, 0.305552, 0.247159, 0.244367, 0.303047, 0.291939, 0.233503, 0.285214, 0.226762, 0.268924, 0.261526, 0.3203, 0.250453, 0.309106, 0.23469, 0.293352, 0.223875, 0.282544, 0.255703, 0.301039, 0.242517, 0.23784, 0.296501, 0.290655, 0.23216, 0.287324, 0.228802, 0.262458, 0.258959, 0.317619, 0.25089, 0.309573, 0.236519, 0.295205, 0.22516, 0.283947, 0.255704, 0.30296, 0.244527, 0.236433, 0.295086, 0.284775, 0.226335, 0.283574, 0.225129, 0.262725, 0.24831, 0.306971, 0.247738, 0.306476, 0.239625, 0.298294, 0.235648, 0.294362, 0.289437, 0.230907, 0.266845, 0.317326, 0.258806, 0.309412, 0.250963, 0.305952, 0.247513]", 
+                "[0.294119, 0.235627, 0.27929, 0.220766, 0.251409, 0.241367, 0.300034, 0.290822, 0.232356, 0.285236, 0.226706, 0.261487, 0.309889, 0.251347, 0.300808, 0.242278, 0.29367, 0.235143, 0.281117, 0.222666, 0.247612, 0.310393, 0.251948, 0.241415, 0.300065, 0.226875, 0.285547, 0.272369, 0.21392, 0.255075, 0.305552, 0.247037, 0.293161, 0.234729, 0.283864, 0.225426, 0.25914, 0.254411, 0.313193, 0.308799, 0.250368, 0.29474, 0.236211, 0.228349, 0.287069, 0.258804, 0.302129, 0.243606, 0.235491, 0.294147, 0.291556, 0.233111, 0.268802, 0.323359, 0.264843, 0.258823, 0.317517, 0.312769, 0.254319, 0.304621, 0.246081, 0.303168, 0.244639, 0.294966, 0.236444, 0.288092, 0.229651, 0.263269, 0.319605, 0.261186, 0.257299, 0.315959, 0.25673, 0.315389, 0.2424, 0.301087, 0.240124, 0.298856, 0.236853, 0.29557, 0.233102, 0.292007, 0.233002, 0.291725, 0.265998, 0.313183, 0.254744, 0.311063, 0.252623, 0.306356, 0.247862, 0.296973, 0.23848, 0.285152, 0.22664, 0.27808, 0.219584, 0.252347, 0.242131, 0.300791, 0.247466, 0.306177, 0.238474, 0.29713, 0.229539, 0.288197, 0.226123, 0.284829, 0.25669, 0.308306, 0.24979, 0.321517, 0.263024, 0.246957, 0.305684, 0.294407, 0.23588, 0.279756, 0.221248, 0.25162, 0.305019, 0.246569, 0.300463, 0.241939, 0.295869, 0.237396, 0.28539, 0.226945, 0.279608, 0.221158, 0.25615, 0.244684, 0.303346, 0.298929, 0.240414, 0.289793, 0.231346, 0.286471, 0.22803, 0.25854, 0.308831, 0.250368, 0.29946, 0.240969, 0.29531, 0.236797, 0.289577, 0.231065, 0.267054, 0.25924, 0.317889, 0.308856, 0.25042, 0.302503, 0.244116, 0.292592, 0.234175, 0.283351, 0.224918, 0.258572, 0.254937, 0.313681, 0.305338, 0.246811, 0.290389, 0.231972, 0.282419, 0.223892, 0.255894, 0.306359, 0.247834, 0.301542, 0.243098, 0.236066, 0.294778, 0.285359, 0.226923, 0.261605, 0.31441, 0.255888, 0.309156, 0.250642, 0.306803, 0.248285, 0.301671, 0.243156, 0.289171, 0.230739, 0.225708, 0.284418, 0.260593, 0.304546, 0.246108, 0.242489, 0.301231, 0.290813, 0.232298, 0.279404, 0.220917, 0.257886, 0.249902, 0.308605, 0.238335, 0.297099, 0.228099, 0.28686, 0.224428, 0.283172, 0.258243, 0.313154, 0.254721, 0.239723, 0.29847, 0.292464, 0.233983, 0.28412, 0.225659, 0.256974, 0.247911, 0.306491, 0.237778, 0.296433, 0.229616, 0.288267, 0.225961, 0.284661, 0.262992, 0.310133, 0.251693, 0.243389, 0.302099, 0.298878, 0.240358, 0.295241, 0.236808, 0.231817, 0.29058, 0.266656, 0.25725, 0.316009, 0.244405, 0.303072, 0.292353, 0.233985, 0.218369, 0.277129, 0.25098, 0.245108, 0.303776, 0.295085, 0.236738, 0.286266, 0.227768, 0.260201, 0.302921, 0.244533, 0.296505, 0.238067, 0.231032, 0.289767, 0.278282, 0.219849, 0.257756, 0.252183, 0.310991, 0.245234, 0.303964, 0.304523, 0.245994, 0.23112, 0.289786, 0.228649, 0.287408, 0.261251, 0.317262, 0.258831, 0.254965, 0.313723, 0.30336, 0.244844, 0.298209, 0.239771, 0.231425, 0.290168, 0.229459, 0.288131, 0.267783, 0.316043, 0.25752, 0.302133, 0.243607, 0.290332, 0.231796, 0.223717, 0.282442, 0.259565, 0.312216, 0.253767, 0.297431, 0.238915]", 
+                "[0.284339, 0.225912, 0.223239, 0.281975, 0.256936, 0.254913, 0.313571, 0.248198, 0.306895, 0.243743, 0.302429, 0.236915, 0.295672, 0.234261, 0.292914, 0.264447, 0.317445, 0.259001, 0.256666, 0.315355, 0.312668, 0.254256, 0.251481, 0.310155, 0.25124, 0.309926, 0.238712, 0.297382, 0.231592, 0.290317, 0.220179, 0.27886, 0.259569, 0.312359, 0.253916, 0.299706, 0.241297, 0.294038, 0.235623, 0.288875, 0.23036, 0.26726, 0.254698, 0.313366, 0.249859, 0.308569, 0.234424, 0.293257, 0.222064, 0.280731, 0.25242, 0.303814, 0.24524, 0.293391, 0.23497, 0.225127, 0.283872, 0.263247, 0.257831, 0.316475, 0.30436, 0.245923, 0.299806, 0.241291, 0.230917, 0.289597, 0.280304, 0.221796, 0.254763, 0.30891, 0.250378, 0.306409, 0.247902, 0.237248, 0.295929, 0.283382, 0.224888, 0.267543, 0.209016, 0.23825, 0.293238, 0.234722, 0.221963, 0.280712, 0.246432, 0.24297, 0.301832, 0.29603, 0.237511, 0.231592, 0.290327, 0.224152, 0.282876, 0.256871, 0.249006, 0.307749, 0.300786, 0.242344, 0.231747, 0.290463, 0.221186, 0.279899, 0.25831, 0.254094, 0.312839, 0.304453, 0.245923, 0.242845, 0.301522, 0.241446, 0.300109, 0.29899, 0.240503, 0.231185, 0.289964, 0.22316, 0.281897, 0.26131, 0.253375, 0.312108, 0.303801, 0.245271, 0.242631, 0.301408, 0.231285, 0.289939, 0.281549, 0.223122, 0.261392, 0.311253, 0.252777, 0.245559, 0.304317, 0.236404, 0.29508, 0.281304, 0.222795, 0.257077, 0.303027, 0.244592, 0.289438, 0.231002, 0.225419, 0.284153, 0.2663, 0.314669, 0.256156, 0.310006, 0.251515, 0.306988, 0.248474, 0.298392, 0.239897, 0.288127, 0.229757, 0.281289, 0.222864, 0.265364, 0.249443, 0.308099, 0.248854, 0.30756, 0.247281, 0.305936, 0.299307, 0.240818, 0.2957, 0.237231, 0.232966, 0.291644, 0.288966, 0.230395, 0.26744, 0.331236, 0.27286, 0.317985, 0.259556, 0.315053, 0.256607, 0.302957, 0.244524, 0.294711, 0.23618, 0.287826, 0.229314, 0.268208, 0.269956, 0.328674, 0.319409, 0.260941, 0.253251, 0.3119, 0.249119, 0.307775, 0.306356, 0.247909, 0.242901, 0.301558, 0.238116, 0.296877, 0.286257, 0.227805, 0.217149, 0.275813, 0.255237, 0.298855, 0.240338, 0.297336, 0.238866, 0.290351, 0.23183, 0.277538, 0.219048, 0.251656, 0.243871, 0.302552, 0.294414, 0.235986, 0.285921, 0.227397, 0.263697, 0.311067, 0.25254, 0.30022, 0.241693, 0.296837, 0.238389, 0.291145, 0.232623, 0.287699, 0.229147, 0.264901, 0.260624, 0.319285, 0.254886, 0.313558, 0.30901, 0.250496, 0.295148, 0.236634, 0.225709, 0.284448, 0.269771, 0.21138, 0.253163, 0.242843, 0.301595, 0.296007, 0.237553, 0.228594, 0.287258, 0.23055, 0.289205, 0.269859, 0.313809, 0.255393, 0.30801, 0.249494, 0.241225, 0.299897, 0.294247, 0.23575, 0.283322, 0.224837, 0.258324, 0.306695, 0.248177, 0.295327, 0.236805, 0.222871, 0.281532, 0.270884, 0.212365, 0.248328, 0.291338, 0.232891, 0.226036, 0.284702, 0.264349, 0.318161, 0.259749, 0.244698, 0.303371, 0.297586, 0.239113, 0.29035, 0.23184, 0.22054, 0.279202, 0.256605, 0.308204, 0.249691, 0.294169, 0.235628, 0.288565, 0.230056, 0.267069, 0.321392, 0.262845, 0.257185]"
+            ], 
+            "mean_batch_sizes": [
+                {
+                    "tf-resnet-feats": 1.99
+                }, 
+                {
+                    "tf-resnet-feats": 1.81
+                }, 
+                {
+                    "tf-resnet-feats": 1.82
+                }, 
+                {
+                    "tf-resnet-feats": 1.82
+                }, 
+                {
+                    "tf-resnet-feats": 1.81
+                }, 
+                {
+                    "tf-resnet-feats": 1.82
+                }, 
+                {
+                    "tf-resnet-feats": 1.82
+                }
+            ], 
+            "mean_lats": [
+                0.9102413533333333, 
+                0.26594444666666667, 
+                0.26628946, 
+                0.2677542233333333, 
+                0.2668308733333334, 
+                0.26768725, 
+                0.2676705933333334
+            ]
+        }
+    ], 
+    "node_configs": [
+        {
+            "model_image": "model-comp/tf-resnet-feats", 
+            "name": "tf-resnet-feats", 
+            "cpus_per_replica": 2, 
+            "input_type": "floats", 
+            "use_nvidia_docker": true, 
+            "batch_size": 2, 
+            "num_replicas": 1, 
+            "instance_type": "p2.8xlarge", 
+            "no_diverge": true, 
+            "slo": 5000000, 
+            "gpus_per_replica": 1, 
+            "allocated_cpus": [
+                17, 
+                18, 
+                19, 
+                20, 
+                21, 
+                22
+            ], 
+            "gpus": [
+                0
+            ], 
+            "input_size": -1
+        }
+    ]
+}
