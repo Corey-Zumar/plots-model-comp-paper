@@ -11,18 +11,21 @@ def load_results(results_dir):
     fs = os.listdir(results_dir)
     experiments = {}
     for exp in fs:
-        if exp[-4:] == "json":
-            with open(os.path.join(results_dir, exp), "r") as f:
-                data = json.load(f)
-                assert data["node_configs"][0]["no_diverge"]
-                format_client_metrics(data)
-                first_good_trial, last_good_trial = select_valid_trials(data)
-                extract_good_results(data, first_good_trial, last_good_trial)
-                if max([len(cm["thrus"]) for cm in data["client_metrics"]]) > 5:
-                    experiments[exp] = data
-        else:
-            # print("skipping %s" % os.path.join(results_dir, exp))
-            pass
+        try:
+            if exp[-4:] == "json":
+                with open(os.path.join(results_dir, exp), "r") as f:
+                    data = json.load(f)
+                    #assert data["node_configs"][0]["no_diverge"]
+                    format_client_metrics(data)
+                    first_good_trial, last_good_trial = select_valid_trials(data)
+                    extract_good_results(data, first_good_trial, last_good_trial)
+                    if max([len(cm["thrus"]) for cm in data["client_metrics"]]) > 5:
+                        experiments[exp] = data
+            else:
+                # print("skipping %s" % os.path.join(results_dir, exp))
+                pass
+        except Exception as e:
+            print(e)
     return experiments
 
 
@@ -39,9 +42,15 @@ def select_valid_trials(results_json):
 
     num_good_trials = 8
 
+    if len(p99_lats) <= num_good_trials:
+        good_trials = p99_lats[1:]
+        num_good_trials = len(good_trials) - 1
+    else:
+        good_trials = p99_lats[-1*num_good_trials:]
+
     # We assume that at least the last 8 trials were good
-    last_8_mean = np.mean(p99_lats[-1*num_good_trials:])
-    last_8_stdev = np.std(p99_lats[-1*num_good_trials:])
+    last_8_mean = np.mean(good_trials)
+    last_8_stdev = np.std(good_trials)
 
     # good_trials = []
     # for i in reversed(range(len(p99_lats))):
@@ -172,6 +181,9 @@ def compute_cost(results_json):
         total_cost += cost
     return total_cost
 
+def compute_mean_efficiency(mean_thru, cost):
+    return float(mean_thru) / cost
+
 
 def extract_all_latencies(results_json):
     client_metrics = results_json["client_metrics"]
@@ -199,6 +211,7 @@ def create_model_profile_df(results_dir):
     inst_types = []
     costs = []
     fnames = []
+    efficiencies = []
 
     model_name = experiments[next(iter(experiments))]["node_configs"][0]["name"]
 
@@ -215,6 +228,8 @@ def create_model_profile_df(results_dir):
         p99_lats.append(np.percentile(all_lats, 99))
         mean_batches.append(mean_batch)
         fnames.append(fname)
+        efficiency = compute_mean_efficiency(mean_thru, compute_cost(e))
+        efficiencies.append(efficiency)
 
     results_dict = {
         "num_gpus_per_replica": gpus,
@@ -226,7 +241,7 @@ def create_model_profile_df(results_dir):
         "inst_type": inst_types,
         "cost": costs,
         "fname": fnames,
-
+        "thru / $" : efficiencies
     }
 
     df = pd.DataFrame.from_dict(results_dict)

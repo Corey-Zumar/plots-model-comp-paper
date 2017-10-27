@@ -245,6 +245,75 @@ def load_single_proc_end_to_end(name, results_dir):
     df = pd.DataFrame.from_dict(results_dict)
     return df
 
+def load_single_proc_e2e_tuning(name, results_dir):
+    """
+    results_dir should be the top-level directory for an experiment. E.g.
+    max_thru or min_lat.
+    """
+    results_dir = os.path.abspath(results_dir)
+
+    client_fs = os.listdir(results_dir)
+    all_results = []
+    for f in client_fs:
+        if f[-4:] == "json":
+            with open(os.path.join(results_dir, f), "r") as json_file:
+                res = json.load(json_file)
+                client_metrics = res["client_metrics"][0]
+                for metric in client_metrics:
+                    client_metrics[metric] = client_metrics[metric][1:]
+                all_results.append(res)
+
+    exp_name = []
+    num_replicas = []
+    p99_lat_secs = []
+    mean_lat_secs = []
+    total_thru = []
+    total_cost = []
+    batch_sizes = []
+
+    num_cpus = []
+
+    num_replicas = 1
+
+    for client_results in all_results:
+        exp_name.append(name)
+        # print(json.dumps(client_results[0][0], indent=4))
+        cur_num_replicas = 1
+
+        all_p99s = np.array(client_results["client_metrics"][0]["p99_lats"]).flatten()
+        p99_lat_secs.append(np.mean(all_p99s))
+
+        all_mean_lats = np.array(client_results["client_metrics"][0]["mean_lats"]).flatten()
+        mean_lat_secs.append(np.mean(all_mean_lats))
+
+        mean_thrus = np.array(np.mean(client_results["client_metrics"][0]["thrus"]))
+        total_thru.append(np.sum(mean_thrus))
+
+        single_rep_config = client_results["node_configs"]
+        total_gpus = np.sum([len(n["gpus"]) for n in single_rep_config]) * cur_num_replicas
+
+        batch_size = single_rep_config[0]["batch_size"]
+        batch_sizes.append(batch_size)
+
+        total_cpus = len(single_rep_config[0]["allocated_cpus"]) * cur_num_replicas
+        num_cpus.append(total_cpus)
+        total_cost.append(total_gpus * COST_PER_GPU + total_cpus * COST_PER_CPU)
+
+    results_dict = {
+        "name": exp_name,
+        "num_replicas": num_replicas,
+        "mean_throughput": total_thru,
+        "p99_latency": p99_lat_secs,
+        "mean_latency": mean_lat_secs,
+        "cost": total_cost,
+        "num_cpus" : num_cpus,
+        "batch_size" : batch_sizes
+    }
+
+    df = pd.DataFrame.from_dict(results_dict)
+    return df
+
+
 def load_pipeline_one_single_proc():
     max_thru_df = load_single_proc_end_to_end(
         "max_thru", os.path.abspath("../results/e2e_profs/single_process/image_driver_1/max_thru/"))
