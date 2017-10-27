@@ -18,8 +18,9 @@ def load_results(results_dir):
                     #assert data["node_configs"][0]["no_diverge"]
                     format_client_metrics(data)
                     first_good_trial, last_good_trial = select_valid_trials(data)
+                    print(first_good_trial, last_good_trial)
                     extract_good_results(data, first_good_trial, last_good_trial)
-                    if max([len(cm["thrus"]) for cm in data["client_metrics"]]) > 5:
+                    if max([len(cm["thrus"]) for cm in data["client_metrics"]]) >= 4:
                         experiments[exp] = data
             else:
                 # print("skipping %s" % os.path.join(results_dir, exp))
@@ -43,8 +44,8 @@ def select_valid_trials(results_json):
     num_good_trials = 8
 
     if len(p99_lats) <= num_good_trials:
-        good_trials = p99_lats[1:]
-        num_good_trials = len(good_trials) - 1
+        good_trials = p99_lats[2:]
+        num_good_trials = len(good_trials) - 2
     else:
         good_trials = p99_lats[-1*num_good_trials:]
 
